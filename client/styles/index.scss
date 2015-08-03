@@ -1,0 +1,40 @@
+$bodyBackgroundColor: #030303;
+$fontColor: #ace;
+$cellHeight: 9rem;
+
+body {
+  background-color: $bodyBackgroundColor;
+  color: $fontColor;
+  cursor: default;
+  font-family: sans-serif;
+  margin: 0;
+  user-select: none;
+}
+
+table {
+  display: inline-block;
+  border-radius: $cellHeight / 3;
+  box-shadow: 0 0 $cellHeight / 3 0 $fontColor;
+  display: inline-block;
+  font-family: sans-serif;
+  padding: $cellHeight / 6;
+  margin: $cellHeight / 3 0;
+
+  td {
+    box-shadow: 0 0 $cellHeight / 3 0 $fontColor;
+    cursor: pointer;
+    font-size: $cellHeight / 3;
+    height: $cellHeight;
+    text-align: center;
+    width: $cellHeight;
+
+    &:hover {
+      background: darken($fontColor, 50%);
+      text-shadow: 0 0 $cellHeight / 9 lighten($fontColor, 10%);
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
