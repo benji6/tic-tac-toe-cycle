@@ -75,7 +75,6 @@ gulp.task('scriptsProd', function () {
     .bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('index.js'))
-    .pipe(plumber())
     .pipe(buffer())
     .pipe(uglify())
     .pipe(gulp.dest(publicPath + '/scripts'));

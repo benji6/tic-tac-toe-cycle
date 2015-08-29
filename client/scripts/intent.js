@@ -1,3 +1,3 @@
-export default DOM => ({
-  move$: DOM.get('.board .cell', 'click').map(e => e.target.id),
-});
+import {map} from 'ramda';
+export default DOM => ({move$: map(e => e.target.id,
+                                   DOM.get('.board .cell', 'click'))});
