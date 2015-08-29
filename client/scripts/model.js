@@ -2,6 +2,7 @@ import {all, always, and, any, compose, empty, equals, filter, flatten,
         flip, gt, ifElse, length, map, none, nth, or, range} from 'ramda';
 import {mapIndexed} from './tools';
 
+let gameOver = false;
 const sideLength = 3;
 const seedRange = range(0, sideLength);
 const [equals0, equals1, equals2] = map(equals, seedRange);
@@ -30,6 +31,7 @@ export default ({move$}) => move$
                                                                            equals0(acc[row][col])) ? currentPlayerCode(acc) : y,
                                                              x),
                                         acc))
-  .filter(x => !isVictory(x))
+  .filter(() => !gameOver)
+  .do(x => gameOver = isVictory(x))
   .map(board => ({board: computeBoardViewModel(board),
                   message: computeMessageViewModel(board)}));
