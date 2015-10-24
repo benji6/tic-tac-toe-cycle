@@ -11,7 +11,6 @@ const minifyCSS = require('gulp-minify-css');
 const minifyHTML = require('gulp-minify-html');
 const minifyInline = require('gulp-minify-inline');
 const plumber = require('gulp-plumber');
-const R = require('ramda');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const source = require('vinyl-source-stream');
@@ -47,7 +46,7 @@ gulp.task('html', () => gulp.src('client/index.html')
   .pipe(gulp.dest(publicPath))
   .pipe(connect.reload()));
 
-gulp.task('scriptsDev', () => watchify(browserify(browserifyEntryPath, R.assoc('debug', true, watchify.args)))
+gulp.task('scriptsDev', () => watchify(browserify(browserifyEntryPath, {...watchify.args, debug: true}))
   .transform(babelify, {stage: 0})
   .bundle()
   .pipe(plumber())
