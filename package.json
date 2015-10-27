@@ -10,6 +10,7 @@
     "dev": "node_modules/.bin/babel-node node_modules/.bin/gulp"
   },
   "devDependencies": {
+    "babel": "^5.8.29",
     "babel-eslint": "^4.1.3",
     "babelify": "^6.4.0",
     "browserify": "^11.2.0",
@@ -33,8 +34,9 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
-    "@cycle/core": "^3.1.0",
-    "@cycle/dom": "^5.0.1",
+    "@cycle/core": "^5.0.1",
+    "@cycle/dom": "^7.1.1",
+    "cycle-audio-graph": "^0.1.0",
     "ramda": "^0.18.0"
   }
 }

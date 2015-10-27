@@ -1,3 +1,3 @@
 import {map} from 'ramda';
-export default DOM => ({move$: map(e => e.target.id,
-                                   DOM.get('.board .cell', 'click'))});
+const ids = map(e => e.target.id);
+export default ({DOM}) => ({move$: ids(DOM.select('.board .cell').events('click'))});
