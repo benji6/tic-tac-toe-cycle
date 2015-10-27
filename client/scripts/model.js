@@ -28,17 +28,18 @@ const computeMessageViewModel = ifElse(isVictory,
 
 const computeAudioGraphParams = (board, currentTime) => {
   const currentPlayerCode = computeCurrentPlayerCode(board);
-  return boardEmpty(board) ?
-    {} :
-    {0: ['gain', 'output', {gain: 0.3}],
-     1: ['oscillator', 0, {type: 'triangle',
-                           frequency: currentPlayerCode === 1 ? 880 : 440,
-                           stopTime: currentTime + 0.1}],
-     2: ['oscillator', 0, {type: 'triangle',
-                           frequency: currentPlayerCode === 1 ? 330 : 660,
-                           detune: 4,
-                           startTime: currentTime + 0.1,
-                           stopTime: currentTime + 0.2}]};
+  if (boardEmpty(board)) {
+    return {};
+  }
+  return {0: ['gain', 'output', {gain: 0.3}],
+          1: ['oscillator', 0, {type: 'triangle',
+                                frequency: currentPlayerCode === 1 ? 880 : 440,
+                                stopTime: currentTime + 0.1}],
+          2: ['oscillator', 0, {type: 'triangle',
+                                frequency: currentPlayerCode === 1 ? 330 : 660,
+                                detune: 4,
+                                startTime: currentTime + 0.1,
+                                stopTime: currentTime + 0.2}]};
 };
 
 export default ({move$}) => move$
