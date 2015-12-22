@@ -46,7 +46,7 @@ gulp.task('html', () => gulp.src('client/index.html')
   .pipe(gulp.dest(publicPath))
   .pipe(connect.reload()));
 
-gulp.task('scriptsDev', () => watchify(browserify(browserifyEntryPath, {...watchify.args, debug: true}))
+gulp.task('scriptsDev', () => watchify(browserify(browserifyEntryPath, Object.assign({}, watchify.args, {debug: true})))
   .transform(babelify, {stage: 0})
   .bundle()
   .pipe(plumber())

@@ -6,8 +6,8 @@
   "author": "Ben Hall",
   "license": "GPL-3.0",
   "scripts": {
-    "build": "node_modules/.bin/babel-node node_modules/.bin/gulp build",
-    "dev": "node_modules/.bin/babel-node node_modules/.bin/gulp"
+    "build": "gulp build",
+    "dev": "gulp"
   },
   "devDependencies": {
     "babel": "^5.8.29",
