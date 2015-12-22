@@ -36,7 +36,7 @@
   "dependencies": {
     "@cycle/core": "^5.0.1",
     "@cycle/dom": "^7.1.1",
-    "cycle-audio-graph": "^0.1.0",
+    "cycle-audio-graph": "^0.2.0",
     "ramda": "^0.18.0"
   }
 }
