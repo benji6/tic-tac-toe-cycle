@@ -18,14 +18,14 @@ const uglify = require('gulp-uglify')
 const watchify = require('watchify')
 
 const browserifyEntryPath = 'client/scripts/index.js'
-const publicPath = 'public'
+const publicPath = 'dist'
 
 gulp.task('connect', () => connect.server({
   livereload: true,
   root: publicPath,
 }))
 
-gulp.task('clean', () => del('public/scripts/index*'))
+gulp.task('clean', () => del('dist/scripts/index*'))
 
 gulp.task('styles', () => gulp.src('client/styles/index.scss')
   .pipe(plumber())
