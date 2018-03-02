@@ -66,9 +66,9 @@ export default ({move$}) => move$
   )
   .filter(() => !gameOver)
   .map(x => (gameOver = isVictory(x), x))
+  .startWith(emptyBoard)
   .map(board => ({
     audioGraphParams: computeAudioGraphParams(board, audioContext.currentTime),
     board: computeBoardViewModel(board),
     message: computeMessageViewModel(board),
   }))
-  .startWith(emptyBoard)

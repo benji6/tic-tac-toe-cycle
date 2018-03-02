@@ -1560,11 +1560,11 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-cycle-audio-graph@^0.2.0:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/cycle-audio-graph/-/cycle-audio-graph-0.2.2.tgz#5cc4a8e9e4fbf4e10710caa2223987cbecb56649"
+cycle-audio-graph@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/cycle-audio-graph/-/cycle-audio-graph-0.4.0.tgz#c51d1bba8ac46e971c622eccf5143f24cdf604a0"
   dependencies:
-    virtual-audio-graph "^0.16.6"
+    virtual-audio-graph "^0.19.0"
 
 d@1:
   version "1.0.0"
@@ -4625,10 +4625,6 @@ ramda@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.18.0.tgz#c6e3c5d4b9ab1f7906727fdeeb039152a85d4db3"
 
-ramda@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.21.0.tgz#a001abedb3ff61077d4ff1d577d44de77e8d0a35"
-
 random-bytes@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
@@ -6003,11 +5999,9 @@ vinyl@^0.5.0:
     clone-stats "^0.0.1"
     replace-ext "0.0.1"
 
-virtual-audio-graph@^0.16.6:
-  version "0.16.9"
-  resolved "https://registry.yarnpkg.com/virtual-audio-graph/-/virtual-audio-graph-0.16.9.tgz#a6fcec3b1ba4fd7cc7b183eccba9e3dc76d26d05"
-  dependencies:
-    ramda "^0.21.0"
+virtual-audio-graph@^0.19.0:
+  version "0.19.5"
+  resolved "https://registry.yarnpkg.com/virtual-audio-graph/-/virtual-audio-graph-0.19.5.tgz#e5db1420ea1c51e5cbb891769a0ea8cae94b01c1"
 
 vm-browserify@~0.0.1:
   version "0.0.4"
